@@ -99,9 +99,8 @@ public class TambahBukuView extends javax.swing.JFrame {
         jLabel1.setText("TAMBAH BUKU");
 
         btnTambahBukuKeluar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnTambahBukuKeluar.setText("Keluar");
-        btnTambahBukuKeluar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        btnTambahBukuKeluar.setContentAreaFilled(false);
+        btnTambahBukuKeluar.setText("Kembali");
+        btnTambahBukuKeluar.setBorder(new javax.swing.border.LineBorder(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow"), 1, true));
         btnTambahBukuKeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTambahBukuKeluarActionPerformed(evt);
@@ -135,6 +134,7 @@ public class TambahBukuView extends javax.swing.JFrame {
         jLabel5.setText("Penerbit");
 
         btnSimpan.setText("SIMPAN");
+        btnSimpan.setBorder(new javax.swing.border.LineBorder(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow"), 1, true));
         btnSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSimpanActionPerformed(evt);
@@ -142,6 +142,7 @@ public class TambahBukuView extends javax.swing.JFrame {
         });
 
         btnUbah.setText("UBAH");
+        btnUbah.setBorder(new javax.swing.border.LineBorder(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow"), 1, true));
         btnUbah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUbahActionPerformed(evt);
@@ -149,6 +150,7 @@ public class TambahBukuView extends javax.swing.JFrame {
         });
 
         btnHapus.setText("HAPUS");
+        btnHapus.setBorder(new javax.swing.border.LineBorder(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow"), 1, true));
         btnHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHapusActionPerformed(evt);

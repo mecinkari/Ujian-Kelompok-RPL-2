@@ -33,8 +33,10 @@ public class AppView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistem Perpustakaan");
+        setAutoRequestFocus(false);
         setBackground(new java.awt.Color(255, 255, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setForeground(java.awt.Color.white);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -43,8 +45,7 @@ public class AppView extends javax.swing.JFrame {
 
         btnTambahBuku.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnTambahBuku.setText("TAMBAH BUKU");
-        btnTambahBuku.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        btnTambahBuku.setContentAreaFilled(false);
+        btnTambahBuku.setBorder(new javax.swing.border.LineBorder(javax.swing.UIManager.getDefaults().getColor("Button.borderColor"), 1, true));
         btnTambahBuku.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnTambahBuku.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnTambahBuku.addActionListener(new java.awt.event.ActionListener() {
@@ -55,8 +56,7 @@ public class AppView extends javax.swing.JFrame {
 
         btnTambahAnggota.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnTambahAnggota.setText("TAMBAH ANGGOTA");
-        btnTambahAnggota.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        btnTambahAnggota.setContentAreaFilled(false);
+        btnTambahAnggota.setBorder(new javax.swing.border.LineBorder(javax.swing.UIManager.getDefaults().getColor("Button.borderColor"), 1, true));
         btnTambahAnggota.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnTambahAnggota.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnTambahAnggota.addActionListener(new java.awt.event.ActionListener() {
@@ -67,10 +67,14 @@ public class AppView extends javax.swing.JFrame {
 
         btnPinjamBuku.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnPinjamBuku.setText("PINJAM BUKU");
-        btnPinjamBuku.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        btnPinjamBuku.setContentAreaFilled(false);
+        btnPinjamBuku.setBorder(new javax.swing.border.LineBorder(javax.swing.UIManager.getDefaults().getColor("Button.borderColor"), 1, true));
         btnPinjamBuku.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnPinjamBuku.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPinjamBuku.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPinjamBukuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -111,6 +115,11 @@ public class AppView extends javax.swing.JFrame {
         new TambahAnggotaView().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnTambahAnggotaActionPerformed
+
+    private void btnPinjamBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPinjamBukuActionPerformed
+        new TambahPeminjamanView().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnPinjamBukuActionPerformed
 
     /**
      * @param args the command line arguments

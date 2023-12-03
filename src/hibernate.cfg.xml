@@ -51,5 +51,6 @@ Contributor(s):
     <property name="hibernate.format_sql">true</property>
     <mapping class="model.Buku"/>
     <mapping class="model.Anggota" />
+    <mapping class="model.Peminjaman" />
     </session-factory>
 </hibernate-configuration>
