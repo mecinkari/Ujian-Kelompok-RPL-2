@@ -82,7 +82,7 @@ public class AnggotaController {
     }
     
     public void hapusAnggota() {
-        if (this.tambahAnggotaView.getTxtIdAnggota().getText().isBlank()) {
+        if (this.tambahAnggotaView.getTxtIdAnggota().getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Anggota Belum Dipilih", "error", JOptionPane.ERROR_MESSAGE);
         } else {
             Anggota anggota = new Anggota();

@@ -116,19 +116,11 @@ public class TambahAnggotaView extends javax.swing.JFrame {
             }
         });
 
-        txtIdAnggota.setText("jTextField1");
-
         jLabel3.setText("Nama");
-
-        txtNamaAnggota.setText("jTextField2");
 
         jLabel4.setText("Email");
 
-        txtEmail.setText("jTextField3");
-
         jLabel5.setText("Nomor Telepon");
-
-        txtNoTelp.setText("jTextField4");
 
         jLabel6.setText("Alamat");
 
@@ -137,8 +129,18 @@ public class TambahAnggotaView extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtAlamat);
 
         btnUbah.setText("UBAH");
+        btnUbah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUbahActionPerformed(evt);
+            }
+        });
 
         btnHapus.setText("HAPUS");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
 
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -151,6 +153,11 @@ public class TambahAnggotaView extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(table);
 
         btnTambahBukuKeluar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -244,6 +251,19 @@ public class TambahAnggotaView extends javax.swing.JFrame {
         dispose();
         new AppView().setVisible(true);
     }//GEN-LAST:event_btnTambahBukuKeluarActionPerformed
+
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
+        // TODO add your handling code here:
+        controller.show();
+    }//GEN-LAST:event_tableMouseClicked
+
+    private void btnUbahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUbahActionPerformed
+        controller.updateAnggota();
+    }//GEN-LAST:event_btnUbahActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+        controller.hapusAnggota();
+    }//GEN-LAST:event_btnHapusActionPerformed
 
     /**
      * @param args the command line arguments
