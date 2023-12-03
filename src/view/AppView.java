@@ -59,6 +59,11 @@ public class AppView extends javax.swing.JFrame {
         btnTambahAnggota.setContentAreaFilled(false);
         btnTambahAnggota.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnTambahAnggota.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnTambahAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTambahAnggotaActionPerformed(evt);
+            }
+        });
 
         btnPinjamBuku.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnPinjamBuku.setText("PINJAM BUKU");
@@ -101,6 +106,11 @@ public class AppView extends javax.swing.JFrame {
         new TambahBukuView().setVisible(true);
         dispose();
     }//GEN-LAST:event_btnTambahBukuActionPerformed
+
+    private void btnTambahAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahAnggotaActionPerformed
+        new TambahAnggotaView().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnTambahAnggotaActionPerformed
 
     /**
      * @param args the command line arguments

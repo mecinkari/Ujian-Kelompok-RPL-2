@@ -50,5 +50,6 @@ Contributor(s):
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.format_sql">true</property>
     <mapping class="model.Buku"/>
+    <mapping class="model.Anggota" />
     </session-factory>
 </hibernate-configuration>
